@@ -15,10 +15,12 @@ public class App
         GamePanel gamePanel = new GamePanel();
         window.add(gamePanel);
 
+        window.pack(); //Causes the window to be sized to fit the preferred size and layout of its subcomponents (=GamePanel)
+
         window.setLocationRelativeTo(null); //The null here does not specify the location of the window.
         window.setVisible(true); //This makes the window visible.
 
-        window.pack(); //Causes the window to be sized to fit the preferred size and layout of its subcomponents (=GamePanel)
+        gamePanel.startGameThread();
 
     }
 }
